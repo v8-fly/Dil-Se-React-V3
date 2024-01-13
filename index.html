@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Add React To Project -->
+    <script src="./ReactScripts/react.js"></script>
+    <script src="./ReactScripts/reactDom.js"></script>
+    <!-- Add React To Project >>> DONE-->
+
+    <!-- Use React -->
+    <script>
+        const heading = React.createElement('h1', {}, 'Hello World From React')
+        console.log(heading);
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(heading);
+    </script>
+    <!-- USe React Done -->
+
+
+</body>
+
+</html>
