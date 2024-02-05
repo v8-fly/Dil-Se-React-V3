@@ -1,38 +1,41 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
+import Header from "./Header"
 
-const heading = React.createElement(
-  "h1",
-  {
-    id: "heading",
-    className: "test",
-    random: Math.random(),
-  },
-  "Hello World From React"
-)
-console.log(heading)
-/**
- * {
-    "type": "h1",
-    "key": null,
-    "ref": null,
-    "props": {
-        "id": "heading",
-        "className": "test",
-        "random": 0.9597999367600845,
-        "children": "Hello World From React"
-    },
-    "_owner": null,
-    "_store": {}
+const rootNode = document.getElementById("root")
+
+const root = ReactDOM.createRoot(rootNode)
+
+// const reactElement = React.createElement(
+//   "h1",
+//   { className: "test" },
+//   React.createElement("span", null, "HI SPAN")
+// )
+
+const MyComponent = () => {
+  const a = 1234
+  return (
+    <>
+      MyComponent
+      <Header />
+    </>
+  )
 }
+
+/**
+ * Component --- Function that returns a peice of JSX
+ * ReactElement - Elements that yopu want to show on browser with childrens and attributes
+ *
+ * If you wanted to render element youu just gave celement name below
+ * root.render(reactElement)
+ *
+ * But If you wanted to give a Component you gave <MyComponent />
+ *
+ * React calls your componeny for you
+ *
  */
 
-// props are childrens + attributes we pass
+console.log(<MyComponent />)
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(heading)
-
-// step 1 -  create React Element
-// step 2 -  To Render that element which is a object pass this object to render function of reactDom
-
-// Render function will create actual elememts for you and put that in DOM
+const reactElement = <h1>Hi Hardik 123</h1>
+root.render(<MyComponent />)
